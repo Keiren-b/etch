@@ -1,0 +1,20 @@
+#heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: grid;
+
+}
+/* making each div a square was solved by using a pseudo element inside each div square */
+#container > div::before {
+content: "";
+padding-top: 100%;
+display: block;
+}
+
+#black {
+  background-color: black;
+}

@@ -1,3 +1,4 @@
+
 function createDivs(col, rows) {
     for(let i = 0; i <(col * rows); i++){
        const div = document.createElement('div')
@@ -9,19 +10,16 @@ function createDivs(col, rows) {
     }
 }
 
-createDivs(16,16);
+createDivs(2,2);
 
 
 function blackColor() { 
-    
     const boxes = container.querySelectorAll('.box')
-
-
         boxes.forEach(box => box.addEventListener('mouseover', ()=> {
             box.style.background = 'black'
-            
         }))
     }
+
    blackColor()
 
    const clearBtn = document.createElement('button');
@@ -30,9 +28,24 @@ function blackColor() {
 
    function reSet(){
     const boxes = container.querySelectorAll('.box')
-    boxes.forEach(box => clearBtn.addEventListener('click', () => {
-        box.style.background = "white"
-    }))
+    boxes.forEach(box => box.remove())
 }
 
-reSet()
+
+    // function reload(){
+    //     clearBtn.addEventListener('click', () =>{
+    //         let x = prompt ("How Many Boxes per Side do you Want?")
+
+    //         if (x===null || x<1){
+    //             reSet();
+    //             createDivs(16,16);
+    //             blackColor();
+    //         }
+    //         else {
+    //             reSet();
+    //             createDivs(x,x);
+    //             blackColor();
+    //         }
+    //     })
+    // }
+    // reload()

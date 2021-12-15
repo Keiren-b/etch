@@ -1,4 +1,7 @@
-
+html {
+  max-width: 960px;
+  margin: auto;
+}
 
 #heading {
   display: flex;
@@ -9,6 +12,7 @@
 #container {
   max-width: 960px;
   display: grid;
+  margin: auto;
 
 }
 /* making each div a square was solved by using a pseudo element inside each div square */
@@ -27,3 +31,10 @@ display: block;
   align-items: center;
   justify-content: center;
 }
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

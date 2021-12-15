@@ -24,28 +24,14 @@ function createDivs(col, rows) {
 
 createDivs(16,16);
 
-function grayColor() { 
-    
-    const boxs = container.querySelectorAll('.box')
-    btnGray.textContent = "Gray"
-    btnGray.addEventListener('click', () => {
-        boxs.forEach(box => box.addEventListener('mouseover', ()=> {
-            let RNum = Math.floor(Math.random() * 255);
-            box.style.background = `rgb(${RNum},${RNum},${RNum})`
-            
-        }))
-    })
-    buttonsContainer.appendChild(btnGray).classList.add('btn')
-}
-grayColor()
-
 function blackColor() { 
     
     const boxs = container.querySelectorAll('.box')
     btnBlack.textContent = "Black"
     btnBlack.addEventListener('click', () => {
         boxs.forEach(box => box.addEventListener('mouseover', ()=> {
-            box.style.background = 'black';
+            box.style.backgroundColor = rgba
+            box.style.opacity = (parseFloat(this.style.opacity) || 0) + 0.2;
         }))
     })
     buttonsContainer.appendChild(btnBlack).classList.add('btn')
@@ -66,7 +52,7 @@ function rgbColor() {
     })
     buttonsContainer.appendChild(btnRgb).classList.add('btn')
 }
-rgbColor();
+
 
 function reSet(){
     const boxs = container.querySelectorAll('.box')

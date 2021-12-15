@@ -27,25 +27,24 @@ function blackColor() {
    buttonContainer.appendChild(clearBtn)
 
    function reSet(){
-    const boxes = container.querySelectorAll('.box')
+    const boxes = container.querySelectorAll('div')
     boxes.forEach(box => box.remove())
 }
 
+    function reload(){
+        clearBtn.addEventListener('click', () =>{
+            let x = prompt ("How Many Boxes per Side do you Want?")
 
-    // function reload(){
-    //     clearBtn.addEventListener('click', () =>{
-    //         let x = prompt ("How Many Boxes per Side do you Want?")
-
-    //         if (x===null || x<1){
-    //             reSet();
-    //             createDivs(16,16);
-    //             blackColor();
-    //         }
-    //         else {
-    //             reSet();
-    //             createDivs(x,x);
-    //             blackColor();
-    //         }
-    //     })
-    // }
-    // reload()
+            if (x===null || x<1){
+                reSet();
+                createDivs(16,16);
+                blackColor();
+            }
+            else {
+                reSet();
+                createDivs(x,x);
+                blackColor();
+            }
+        })
+    }
+    reload()
